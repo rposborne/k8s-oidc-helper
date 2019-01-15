@@ -91,7 +91,7 @@ type UserInfo struct {
 }
 
 func GetUserEmail(accessToken string) (string, error) {
-	uri, _ := url.Parse("https://www.googleapis.com/oauth2/v1/userinfo")
+	uri, _ := url.Parse("https://oauth2.googleapis.com/token")
 	q := uri.Query()
 	q.Set("alt", "json")
 	q.Set("access_token", accessToken)
